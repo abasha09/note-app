@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 
@@ -13,7 +14,7 @@ const SearchBar = ({ value, onChange, handleSearch, onClearSearch }) => {
       />
       {value && (
         <IoMdClose
-          className="text-xl text-slate-500 cursor-pointer hover:text-black "
+          className="text-xl text-slate-500 cursor-pointer hover:text-black mx-1"
           onClick={onClearSearch}
         />
       )}
