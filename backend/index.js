@@ -8,20 +8,19 @@ mongoose.connect(config.connectionString);
 const User = require("./models/user.model");
 const Note = require("./models/note.model");
 
+// APP CONFIG
 const express = require("express");
+const port = process.env.PORT || 4000;
+
 const cors = require("cors");
 const app = express();
 
 const jwt = require("jsonwebtoken");
-const { authenicateToken, authenticateToken } = require("./utilities");
+const { authenticateToken } = require("./utilities");
 
 app.use(express.json());
 
 app.use(cors({ origin: "*" }));
-
-app.get("/", (req, res) => {
-  res.json({ data: "hello" });
-});
 
 ///// Backend Logic
 
